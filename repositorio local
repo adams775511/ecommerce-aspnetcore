@@ -1,0 +1,19 @@
+# Clonar el repo vacío
+git clone https://github.com/adams775511/ecommerce-aspnetcore.git
+cd ecommerce-aspnetcore
+
+# Crear estructura de carpetas
+mkdir -p src/Ecommerce.Web/Models
+mkdir -p src/Ecommerce.Web/Data
+mkdir -p src/Ecommerce.Web/Controllers
+mkdir -p src/Ecommerce.Web/Views/{Home,Product,Cart,Order,Shared}
+mkdir -p src/Ecommerce.Web/ViewModels
+mkdir -p src/Ecommerce.Web/Services
+mkdir -p src/Ecommerce.Web/Areas/Admin/Controllers
+mkdir -p src/Ecommerce.Web/Areas/Admin/Views/{Shared,Product,Order,Dashboard}
+mkdir -p src/Ecommerce.Web/wwwroot/{css,js}
+mkdir -p tests/Ecommerce.Tests
+mkdir -p .github/workflows
+
+# Crear solución
+dotnet new sln -n EcommerceSolution
