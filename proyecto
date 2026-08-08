@@ -1,0 +1,23 @@
+# Proyecto web
+dotnet new mvc -o src/Ecommerce.Web -f net8.0
+
+# Proyecto de pruebas
+dotnet new xunit -o tests/Ecommerce.Tests -f net8.0
+
+# Agregar a solución
+dotnet sln EcommerceSolution.sln add src/Ecommerce.Web/Ecommerce.Web.csproj
+dotnet sln EcommerceSolution.sln add tests/Ecommerce.Tests/Ecommerce.Tests.csproj
+
+# Entrar al proyecto web
+cd src/Ecommerce.Web
+
+# Agregar paquetes NuGet
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.0
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 8.0.0
+dotnet add package Microsoft.AspNetCore.Identity.UI --version 8.0.0
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 12.0.1
+dotnet add package Serilog.AspNetCore --version 8.0.0
+
+cd ../..
